@@ -1,0 +1,4 @@
+[Desktop Entry]
+Name=Enable mouse cursor xmonad
+Exec=xsetroot -cursor_name left_ptr
+Type=Application

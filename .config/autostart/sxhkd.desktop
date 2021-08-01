@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Application
+Name=SXHKD
+Description=Hotkey daemon to prevent middle click paste
+Exec=sxhkd 
+
