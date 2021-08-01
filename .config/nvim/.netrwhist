@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =1
+let g:netrw_dirhist_1='/etc/pulse'
+let g:netrw_dirhist_0='/home/merul/.config/xmobar'
+let g:netrw_dirhist_9='/home/merul/.vim/plugged/tokyonight-vim/colors'
+let g:netrw_dirhist_8='/home/merul/Projects/iotamemes/client/src/components/Memes/Meme'
+let g:netrw_dirhist_7='/home/merul/Projects/iotamemes/client/src/components/Memes'
+let g:netrw_dirhist_6='/home/merul/Projects/iotamemes/client/src/components'
+let g:netrw_dirhist_5='/home/merul/Projects/iotamemes/client/src'
+let g:netrw_dirhist_4='/home/merul/Projects/iotamemes/client'
+let g:netrw_dirhist_3='/home/merul/Projects/iotamemes/client/public'
+let g:netrw_dirhist_2='/home/merul/Projects/iotamemes/client'
