@@ -340,6 +340,7 @@ myManageHook = composeAll
      , className =? "splash"          --> doFloat
      , className =? "toolbar"         --> doFloat
      , className =? "ulauncher"       --> doFloat
+     , title =? "Mozilla Firefox"     --> doShift ( myWorkspaces !! 1 )
      , title =? "Oracle VM VirtualBox Manager"  --> doFloat
      , (className =? "firefox" <&&> resource =? "Dialog") --> doFloat  -- Float Firefox Dialog
      , isFullscreen -->  doFullFloat

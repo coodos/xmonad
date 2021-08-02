@@ -80,3 +80,4 @@ end
 
 export ANDROID_SDK=/home/merul/Android/Sdk/
 set -gx PATH $ANDROID_HOME/emulator $PATH
+fish_vi_key_bindings
