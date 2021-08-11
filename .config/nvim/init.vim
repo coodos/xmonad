@@ -36,6 +36,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'luochen1990/rainbow'
 Plug 'sickill/vim-monokai'
 Plug 'sbdchd/neoformat'
+Plug 'mattn/emmet-vim'
 Plug 'prettier/vim-prettier', {
   \ 'do': 'yarn install',
   \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'svelte', 'yaml', 'html'] }
@@ -49,6 +50,9 @@ let g:python3_host_prog="/usr/bin/python3"
 let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle
 let g:javascript_plugin_jsdoc = 1
 let g:javascript_plugin_ngdoc = 1
+
+" USER EMMET
+let g:user_emmet_leader_key=','
 
 augroup javascript_folding
     au!
