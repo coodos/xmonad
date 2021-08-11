@@ -10,6 +10,7 @@ Plug 'kyoz/purify'
 Plug 'drewtempelmeyer/palenight.vim'
 Plug 'mhartington/oceanic-next'
 Plug 'rakr/vim-one'
+Plug 'ryanoasis/vim-devicons'
 Plug 'dracula/vim'
 Plug 'vim-python/python-syntax'
 Plug 'ghifarit53/tokyonight-vim'
@@ -24,7 +25,6 @@ Plug 'peitalin/vim-jsx-typescript'
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 Plug 'jparise/vim-graphql'
 Plug 'tomasiser/vim-code-dark'
-Plug 'ryanoasis/vim-devicons'
 Plug 'alvan/vim-closetag'
 Plug 'AndrewRadev/tagalong.vim'
 Plug 'zeekay/vim-beautify'
@@ -153,5 +153,11 @@ let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 " when running at every change you may want to disable quickfix
 let g:prettier#quickfix_enabled = 0
 
-autocmd TextChanged,InsertLeave *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.svelte,*.yaml,*.html Prettier
+autocmd InsertLeave *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.svelte,*.yaml,*.html Prettier
 
+let g:rainbow_conf = {
+  \	'guifgs': ['#d9b3ff', '#fabfff', '#dfffb5', '#ffd69c', '#a6fff2'],
+  \ 'separately': {
+  \   'nerdtree': 0,
+  \  }
+	\  }
