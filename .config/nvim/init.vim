@@ -35,6 +35,10 @@ Plug 'caenrique/nvim-toggle-terminal'
 Plug 'jiangmiao/auto-pairs'
 Plug 'luochen1990/rainbow'
 Plug 'sickill/vim-monokai'
+Plug 'sbdchd/neoformat'
+Plug 'prettier/vim-prettier', {
+  \ 'do': 'yarn install',
+  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'svelte', 'yaml', 'html'] }
 
 call plug#end()
 
@@ -51,6 +55,7 @@ augroup javascript_folding
     au FileType javascript setlocal foldmethod=syntax
 augroup END
 
+let g:prettier#autoformat_require_pragma = 0
 
 " mappings...
 map <C-f> :NERDTreeToggle<CR>
@@ -137,4 +142,12 @@ let g:closetag_shortcut = '>'
 " Add > at current position without closing the current tag, default is ''
 "
 let g:closetag_close_shortcut = '<leader>>'
+command! -nargs=0 Prettier :CocCommand prettier.formatFile
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
+
+
+" when running at every change you may want to disable quickfix
+let g:prettier#quickfix_enabled = 0
+
+autocmd TextChanged,InsertLeave *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.svelte,*.yaml,*.html Prettier
 

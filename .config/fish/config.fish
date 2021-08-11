@@ -49,6 +49,7 @@ alias btw="neofetch"
 alias BTW="neofetch | lolcat"
 alias Btw="pfetch | lolcat"
 alias c="clear"
+alias gentoo-btw="neofetch --ascii_distro gentoo | sed 's/Arch Linux/Gentoo/' | sed 's/-arch1-/-gentoo1-/' | sed 's/pacman/emerge/' | sed 's/arch-btw/gentoo-btw/'"
 
 # aliases for devour
 alias vid="devour mpv"
