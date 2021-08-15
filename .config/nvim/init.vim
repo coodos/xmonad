@@ -11,7 +11,6 @@ Plug 'drewtempelmeyer/palenight.vim'
 Plug 'mhartington/oceanic-next'
 Plug 'rakr/vim-one'
 Plug 'ryanoasis/vim-devicons'
-Plug 'dracula/vim'
 Plug 'vim-python/python-syntax'
 Plug 'ghifarit53/tokyonight-vim'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
@@ -37,6 +36,8 @@ Plug 'luochen1990/rainbow'
 Plug 'sickill/vim-monokai'
 Plug 'sbdchd/neoformat'
 Plug 'mattn/emmet-vim'
+Plug 'honza/vim-snippets'
+Plug 'airblade/vim-gitgutter'
 Plug 'prettier/vim-prettier', {
   \ 'do': 'yarn install',
   \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'svelte', 'yaml', 'html'] }
@@ -62,10 +63,17 @@ augroup END
 let g:prettier#autoformat_require_pragma = 0
 
 " mappings...
-map <C-f> :NERDTreeToggle<CR>
+map <C-f> :NERDTreeToggle<cr>R<cr><CR>
 map <C-/> :NERDCommenterToggle
 nnoremap <silent> <C-z> :ToggleTerminal<Enter>
 tnoremap <silent> <C-z> <C-\><C-n>:ToggleTerminal<Enter>
+
+augroup autoCenter
+  autocmd!
+  autocmd CursorMoved * normal! zz
+augroup END
+
+:au bufenter * silent! GitGutterEnable
 
 set modifiable
 
@@ -153,7 +161,7 @@ let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 " when running at every change you may want to disable quickfix
 let g:prettier#quickfix_enabled = 0
 
-autocmd InsertLeave *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.svelte,*.yaml,*.html Prettier
+autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.svelte,*.yaml,*.html Prettier
 
 let g:rainbow_conf = {
   \	'guifgs': ['#d9b3ff', '#fabfff', '#dfffb5', '#ffd69c', '#a6fff2'],
